@@ -2,31 +2,41 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>I18N Products</title>
+    <title>Danh sách sản phẩm (Đa ngôn ngữ)</title>
 </head>
 <body>
 <h2>Danh sách sản phẩm theo ngôn ngữ</h2>
 
+<!-- Form chọn ngôn ngữ -->
 <form method="get" th:action="@{/i18n-products}">
     <label>Language:
         <select name="lang">
             <option th:value="'VI'" th:selected="${lang=='VI'}">VI</option>
             <option th:value="'EN'" th:selected="${lang=='EN'}">EN</option>
             <option th:value="'JA'" th:selected="${lang=='JA'}">JA</option>
+            <option th:value="'CN'" th:selected="${lang=='CN'}">CN</option>
         </select>
     </label>
     <button type="submit">Xem</button>
     <a href="/">Home</a>
 </form>
 
-<table border="1" cellpadding="6" style="margin-top: 10px;">
+<!-- Form tìm kiếm -->
+<form method="get" th:action="@{/i18n-products/search}" style="margin-top: 10px;">
+    <input type="hidden" name="lang" th:value="${lang}" />
+    <input type="text" name="keyword" th:value="${keyword}" placeholder="Nhập từ khóa sản phẩm..." />
+    <button type="submit">Tìm kiếm</button>
+</form>
+
+<!-- Bảng hiển thị kết quả -->
+<table border="1" cellpadding="6" style="margin-top: 15px;">
     <thead>
     <tr>
         <th>ID</th>
-        <th>Product Name (theo [[${lang}]])</th>
-        <th>Category Name (theo [[${lang}]])</th>
-        <th>Price</th>
-        <th>Weight</th>
+        <th>Tên sản phẩm ([[${lang}]])</th>
+        <th>Danh mục ([[${lang}]])</th>
+        <th>Giá</th>
+        <th>Khối lượng</th>
     </tr>
     </thead>
     <tbody>
@@ -37,7 +47,11 @@
         <td th:text="${r[3]}">1000</td>
         <td th:text="${r[4]}">2.5</td>
     </tr>
+    <tr th:if="${#lists.isEmpty(rows)}">
+        <td colspan="5" style="text-align: center;">Không có sản phẩm phù hợp</td>
+    </tr>
     </tbody>
 </table>
+
 </body>
 </html>
