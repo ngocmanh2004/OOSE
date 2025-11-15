@@ -1,0 +1,134 @@
+/* Search Styles - Đặt trong webapp/css/search.css */
+
+.search-basic-bg {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.search-gradwork-bg {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.search-container {
+    max-width: 1200px;
+}
+
+.search-container-wide {
+    max-width: 1400px;
+}
+
+.search-basic-header {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.search-gradwork-header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.search-content {
+    padding: 40px;
+}
+
+.search-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+}
+
+.btn-search {
+    padding: 15px 40px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-basic-btn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.search-basic-btn:hover {
+    box-shadow: 0 10px 20px rgba(245, 87, 108, 0.3);
+}
+
+.search-gradwork-btn {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.search-gradwork-btn:hover {
+    box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
+}
+
+.result-info {
+    padding: 15px;
+    background: #e8f5e9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+.result-info-blue {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.search-basic-thead {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.search-gradwork-thead {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-state-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.empty-state-text {
+    color: #999;
+    font-size: 18px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.badge-success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.badge-warning {
+    background: #fff3cd;
+    color: #856404;
+}
